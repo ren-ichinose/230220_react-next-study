@@ -1,4 +1,4 @@
-const TopPage = () => {
+const CountryCapitalList = () => {
   return (
     <div>
       <h1>国の首都リスト</h1>
@@ -6,7 +6,13 @@ const TopPage = () => {
       <div>アメリカ ... ワシントンD.C.</div>
       <div>中国 ... 北京</div>
       <div>イギリス ... ロンドン</div>
+    </div>
+  );
+};
 
+const PrefectureCapitalList = () => {
+  return (
+    <div>
       <h1>都道府県庁所在地リスト</h1>
       <div>東京都 ... 新宿区</div>
       <div>北海道 ... 札幌市</div>
@@ -16,7 +22,15 @@ const TopPage = () => {
       <div>広島県 ... 広島市</div>
       <div>福岡県 ... 福岡市</div>
     </div>
-  )
-}
+  );
+};
 
-export default TopPage
+const TopPage = () => {
+  return (
+    <div>
+      <CountryCapitalList />
+      <PrefectureCapitalList />       
+  </div>
+  );
+};
+export default TopPage;
