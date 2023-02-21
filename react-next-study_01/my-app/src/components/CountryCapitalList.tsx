@@ -1,3 +1,14 @@
+import React from "react";
+
+interface CardProps {
+  children: React.ReactNode;
+};
+
+interface CoutryCapitalProps {
+  country: string;
+  capital: string;
+}
+
 const countryCapitals = [
   { country: '日本', capital: '東京' },
   { country: 'アメリカ', capital: 'ワシントンD.C.' },
@@ -5,7 +16,7 @@ const countryCapitals = [
   { country: 'イギリス', capital: 'ロンドン' },
 ];
 
-export const Card = (props) => {
+export const Card = (props: CardProps) => {
   return (
     <div
       style={{ 
@@ -22,21 +33,21 @@ export const Card = (props) => {
   );
 };
 
-const CountryCapitalItem = (props) => {
+const CountryCapitalItem = ({ country, capital }: CoutryCapitalProps) => {
   return (
     <>
       <div style={{
           fontSize: "0.7em",
         }}
       >
-        {props.country}
+        {country}
       </div>
       <div style={{
           fontSize: "1.1em",
           fontWeight: "bold",
         }}
       >              
-        {props.capital}
+        {capital}
       </div>
     </>
   );
